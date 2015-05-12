@@ -1,6 +1,6 @@
 package net.mindview.chapter6;
 
-import chapter6.debug.DebugClass;
+import net.mindview.chapter6.debug.DebugClass;
 
 
 public class TestDebugClass {

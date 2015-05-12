@@ -1,6 +1,6 @@
 package net.mindview.chapter6;
 
-import chapter6.access.*;
+import net.mindview.chapter6.access.*;
 
 public class WidgetTest {
     Widget widget = new Widget();
