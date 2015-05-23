@@ -1,13 +1,13 @@
 package net.mindview.chapter8;
 
 public class Tricycle extends Cycle {
-    public static void ride() {
-        System.out.println("Tricycle object.");
+    Tricycle() {
+        info = "Tricycle object";
+        wheelsCount = 3;
     }
+
     public static void main(String[] args) {
-        Cycle cycle = new Tricycle();
-        cycle.ride();
         Tricycle tricycle = new Tricycle();
-        tricycle.ride();
+        tricycle.ride(tricycle);
     }
 }

@@ -1,12 +1,13 @@
 package net.mindview.chapter8;
 
 public class Unicycle extends Cycle {
-    public static void ride() {
-        System.out.println("Unicycle object.");
+    Unicycle() {
+        info = "Unicycle object";
+        wheelsCount = 1;
     }
 
     public static void main(String[] args) {
-        Cycle cycle = new Unicycle();
-        cycle.ride();
+        Unicycle unicycle = new Unicycle();
+        unicycle.ride(unicycle);
     }
 }
