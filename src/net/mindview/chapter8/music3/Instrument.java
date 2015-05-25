@@ -10,4 +10,9 @@ class Instrument {
     void adjust() {
         System.out.println("Adjusting instrument");
     }
+
+    @Override
+    public String toString() {
+        return what();
+    }
 }
