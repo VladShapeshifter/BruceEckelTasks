@@ -9,5 +9,7 @@ class Mouse extends Rodent {
     }
     Mouse(int i){
         super(i);
+        System.out.println("Mouse()");
+        Hamster hamster = new Hamster(9);
     }
 }

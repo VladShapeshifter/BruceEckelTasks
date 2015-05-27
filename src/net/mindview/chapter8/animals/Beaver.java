@@ -9,5 +9,6 @@ class Beaver extends Rodent {
     }
     Beaver(int i){
         super(i);
+        System.out.println("Beaver()");
     }
 }

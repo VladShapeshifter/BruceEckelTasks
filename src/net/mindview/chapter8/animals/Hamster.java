@@ -9,5 +9,6 @@ class Hamster extends Rodent {
     }
     Hamster(int i){
         super(i);
+        System.out.println("Hamster");
     }
 }

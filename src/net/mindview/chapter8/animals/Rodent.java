@@ -11,6 +11,8 @@ class Rodent {
     Rodent() {}
     Rodent(int i) {
         height = i;
+        System.out.println("Rodent()");
+//        Beaver beaver = new Beaver(31);
     }
 
     @Override
