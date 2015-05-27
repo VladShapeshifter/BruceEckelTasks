@@ -1,5 +1,5 @@
 package net.mindview.chapter8.animals;
 
-public enum Meal {
+enum Meal {
     WOOD, GRAIN, GRASS
 }
