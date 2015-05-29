@@ -1,14 +1,24 @@
 package net.mindview.chapter8.animals;
 
-class Hamster extends Rodent {
-    void gnaw(Meal m) {
-        System.out.println("Hamster.gnaw()" + m);
+class Hamster {
+    private int refcount = 0;
+    private static long counter = 0;
+    private final long id = counter++;
+    int height;
+    public void addRef() {
+        refcount++;
     }
-    String info() {
-        return "This is Hamster. It's height is " + height + " sm";
-    }
+    String name;
     Hamster(int i){
-        super(i);
-        System.out.println("Hamster");
+        height = i;
+        System.out.print(this + " height is " + height);
+    }
+    Hamster() {
+        System.out.println("General Hamster was created");
+    }
+
+    @Override
+    public String toString() {
+        return "Hamster " + id;
     }
 }
