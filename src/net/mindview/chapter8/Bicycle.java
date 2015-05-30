@@ -10,4 +10,7 @@ public class Bicycle extends Cycle {
         Bicycle bicycle = new Bicycle();
         bicycle.ride(bicycle);
     }
+    void balance() {
+        System.out.println("Bicycle.balance()");
+    }
 }
