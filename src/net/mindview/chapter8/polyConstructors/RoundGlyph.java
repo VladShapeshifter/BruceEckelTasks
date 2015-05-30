@@ -1,9 +1,9 @@
 package net.mindview.chapter8.polyConstructors;
 
 class RoundGlyph extends Glyph {
-    int radius = 1;
+    protected int radius = 1;
     RoundGlyph(int r) {
-//        draw();
+        draw();
         radius = r;
         System.out.println("RoundGlyph.RoundGlyph(), radius = " + radius);
     }
