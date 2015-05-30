@@ -1,6 +1,6 @@
 package net.mindview.chapter8.polyConstructors;
 
-public class RectangularGlyph extends RoundGlyph {
+class RectangularGlyph extends RoundGlyph {
     RectangularGlyph(int r) {
         super(r);
         draw();

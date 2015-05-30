@@ -6,3 +6,4 @@ public class PolyConstructors {
         new RectangularGlyph(6);
     }
 }
+
