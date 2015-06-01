@@ -4,6 +4,6 @@ public class InheritedClassOne extends BaseClass {
     private int i = 1;
     @Override
     void print() {
-
+        System.out.println(i);
     }
 }
