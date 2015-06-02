@@ -1,10 +1,10 @@
 package net.mindview.chapter9.animals;
 
-class Mouse extends Rodent {
-    void gnaw(Meal m) {
+class Mouse extends RodentImpl {
+    public void gnaw(Meal m) {
         System.out.println("Mouse.gnaw()" + m);
     }
-    String info() {
+    public String info() {
         return "This is Mouse. It's height is " + height + " sm";
     }
     Mouse(int i){

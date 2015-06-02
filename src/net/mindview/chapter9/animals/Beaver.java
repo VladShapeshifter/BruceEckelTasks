@@ -1,10 +1,10 @@
 package net.mindview.chapter9.animals;
 
-class Beaver extends Rodent {
-    void gnaw(Meal m) {
+class Beaver extends RodentImpl {
+    public void gnaw(Meal m) {
         System.out.println("Beaver.gnaw()" + m);
     }
-    String info() {
+    public String info() {
         return "This is Beaver. It's height is " + height + " sm";
     }
     Beaver(int i){

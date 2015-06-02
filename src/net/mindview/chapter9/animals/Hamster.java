@@ -1,10 +1,10 @@
 package net.mindview.chapter9.animals;
 
-class Hamster extends Rodent {
-    void gnaw(Meal m) {
+class Hamster extends RodentImpl {
+    public void gnaw(Meal m) {
         System.out.println("Hamster.gnaw()" + m);
     }
-    String info() {
+    public String info() {
         return "This is Hamster. It's height is " + height + " sm";
     }
     Hamster(int i){
