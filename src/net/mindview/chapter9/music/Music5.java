@@ -3,17 +3,17 @@ package net.mindview.chapter9.music;
 import net.mindview.chapter8.music3.Note;
 
 public class Music5 {
-    static void tune(Instrument i) {
+    static void tune(Playable i) {
         i.play(Note.MIDDLE_C);
     }
-    static void tuneAll(Instrument[] e) {
-        for (Instrument i : e) {
+    static void tuneAll(Playable[] e) {
+        for (Playable i : e) {
             tune(i);
         }
     }
 
     public static void main(String[] args) {
-        Instrument[] orchestra = {
+        Playable[] orchestra = {
                 new Wind(),
                 new Percussion(),
                 new Stringed(),

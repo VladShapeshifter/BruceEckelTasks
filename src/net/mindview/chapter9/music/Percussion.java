@@ -2,9 +2,9 @@ package net.mindview.chapter9.music;
 
 import net.mindview.chapter8.music3.Note;
 
-public class Percussion extends Instrument {
+public class Percussion extends Instrument implements Playable {
     @Override
-    void play(Note n) {
+    public void play(Note n) {
         System.out.println(this + ".play() " + n);
     }
 
