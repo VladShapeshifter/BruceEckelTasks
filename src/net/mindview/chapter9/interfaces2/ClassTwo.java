@@ -36,7 +36,7 @@ public class ClassTwo extends ClassOne implements InterCombined {
 
     }
 
-    static void a(Inter1 a) {
+    static void a(Inter a) {
 
     }
     static void b(Inter2 b) {
