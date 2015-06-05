@@ -1,6 +1,6 @@
 package net.mindview.chapter9.interfaces2;
 
-public class ClassTwo extends ClassOne implements InterCombined {
+public class ClassTwo extends AbstractClass implements InterCombined {
     @Override
     public void interComb() {
 
