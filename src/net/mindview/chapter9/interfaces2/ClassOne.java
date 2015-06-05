@@ -1,0 +1,4 @@
+package net.mindview.chapter9.interfaces2;
+
+public class ClassOne {
+}
