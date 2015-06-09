@@ -28,6 +28,9 @@ public class Sequence {
         public void next() {
             if (i < items.length) i++;
         }
+        Sequence outerClass() {
+            return Sequence.this;
+        }
     }
     public Selector selector() {
         return new SequenceSelector();
