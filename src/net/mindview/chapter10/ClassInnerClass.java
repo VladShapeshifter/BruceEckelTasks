@@ -11,6 +11,24 @@ public class ClassInnerClass {
         }
         return new Inner();
     }
+    class Inner3 implements InterfaceInnerClass {
+        @Override
+        public void method1() {
+
+        }
+    }
+    private class Inner2 implements InterfaceInnerClass {
+
+        @Override
+        public void method1() {
+
+        }
+
+    }
+    InterfaceInnerClass method3() {
+        return new Inner2();
+    }
+
 
 
 }
