@@ -22,16 +22,21 @@ public class ClassInnerClass {
 
         }
     }
-    private class Inner2 implements InterfaceInnerClass {
+    /*private class Inner2 implements InterfaceInnerClass {
 
         @Override
         public void method1() {
 
         }
 
-    }
+    }*/
     InterfaceInnerClass method3() {
-        return new Inner2();
+        return new InterfaceInnerClass() {
+            @Override
+            public void method1() {
+
+            }
+        };
     }
 
 
