@@ -7,6 +7,6 @@ public class RandomEvent {
     }
 
     public static void main(String[] args) {
-//        toss(new CoinTossFactory());
+        toss(CoinToss.factory);
     }
 }

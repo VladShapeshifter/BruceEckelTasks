@@ -3,7 +3,9 @@ package net.mindview.chapter9.toss;
 import java.util.Random;
 
 public class DiceToss implements Toss {
+    private DiceToss() {
 
+    }
     @Override
     public String fling() {
         Random rand = new Random();
@@ -18,4 +20,10 @@ public class DiceToss implements Toss {
             case 6 : return "6";
         }
     }
+    public static TossFactory factory = new TossFactory() {
+        @Override
+        public Toss getToss() {
+            return new DiceToss();
+        }
+    };
 }

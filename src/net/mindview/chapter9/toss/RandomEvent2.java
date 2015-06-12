@@ -7,6 +7,6 @@ public class RandomEvent2 extends RandomEvent {
     }
 
     public static void main(String[] args) {
-        toss(new DiceTossFactory());
+        toss(DiceToss.factory);
     }
 }
