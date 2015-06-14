@@ -11,6 +11,7 @@ public class Sequence {
             items[next++] = x;
         }
     }
+
     private class SequenceSelector implements Selector {
         private int i = 0;
 
@@ -32,16 +33,42 @@ public class Sequence {
             return Sequence.this;
         }
     }
+
+    private class ReverseSelector implements Selector {
+        private int i = items.length-1;
+
+        @Override
+        public boolean end() {
+            return i == -1;
+        }
+
+        @Override
+        public Object current() {
+            return items[i];
+        }
+
+        @Override
+        public void next() {
+            if (i >= 0) i--;
+        }
+    }
+
     public Selector selector() {
         return new SequenceSelector();
     }
 
+    public Selector reverseSelector() {
+        return new ReverseSelector();
+    }
+
     public static void main(String[] args) {
-        Sequence sequence = new Sequence(10);
-        for (int i = 0; i < 10; i++) {
+        int numberOfObjects = 10;
+        Sequence sequence = new Sequence(numberOfObjects);
+        for (int i = 0; i < numberOfObjects; i++) {
             sequence.add(Integer.toString(i));
         }
-        Selector selector = sequence.selector();
+        Selector selector = sequence.reverseSelector();
+
         while (!selector.end()) {
             System.out.print(selector.current() + " ");
             selector.next();
