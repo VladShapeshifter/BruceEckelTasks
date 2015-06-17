@@ -98,6 +98,38 @@ public class GreenhouseControls extends Controller {
         }
     }
 
+    private boolean ventilation = false;
+    public class VentilationOn extends Event {
+        public VentilationOn(long delatTime) {
+            super(delatTime);
+        }
+
+        @Override
+        public void action() {
+            ventilation = true;
+        }
+
+        @Override
+        public String toString() {
+            return "Ventilation is on";
+        }
+    }
+    public class VentilationOff extends Event {
+        public VentilationOff(long delayTime) {
+            super(delayTime);
+        }
+
+        @Override
+        public void action() {
+            ventilation = false;
+        }
+
+        @Override
+        public String toString() {
+            return "Ventilation is off";
+        }
+    }
+
     public class Bell extends Event {
         public Bell(long delayTime) {
             super(delayTime);
@@ -122,8 +154,7 @@ public class GreenhouseControls extends Controller {
             for (Event e : eventList) {
                 addEvent(e);
             }
-        }
-
+       }
 
         @Override
         public void action() {

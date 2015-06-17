@@ -10,7 +10,9 @@ public class GreenhouseController {
                 gc.new LightOff(400),
                 gc.new WaterOn(600),
                 gc.new WaterOff(800),
-                gc.new ThermostatDay(1400)
+                gc.new ThermostatDay(1400),
+                gc.new VentilationOn(1600),
+                gc.new VentilationOff(1800)
         };
         gc.addEvent(gc.new Restart(2000, eventList));
         if (args.length == 1) {
