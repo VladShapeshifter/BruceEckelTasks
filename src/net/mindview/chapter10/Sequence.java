@@ -1,15 +1,15 @@
 package net.mindview.chapter10;
 
+import java.util.ArrayList;
+
 public class Sequence {
-    private Object[] items;
+    private ArrayList items;
     private int next = 0;
-    public Sequence(int size) {
-        items = new Object[size];
+    public Sequence() {
+        items = new ArrayList();
     }
     public void add(Object x) {
-        if (next < items.length) {
-            items[next++] = x;
-        }
+        items.add(x);
     }
 
     private class SequenceSelector implements Selector {
@@ -17,17 +17,17 @@ public class Sequence {
 
         @Override
         public boolean end() {
-            return i == items.length;
+            return i == items.size();
         }
 
         @Override
         public Object current() {
-            return items[i];
+            return items.get(i);
         }
 
         @Override
         public void next() {
-            if (i < items.length) i++;
+            if (i < items.size()) i++;
         }
         Sequence outerClass() {
             return Sequence.this;
@@ -35,7 +35,7 @@ public class Sequence {
     }
 
     private class ReverseSelector implements Selector {
-        private int i = items.length-1;
+        private int i = items.size()-1;
 
         @Override
         public boolean end() {
@@ -44,7 +44,7 @@ public class Sequence {
 
         @Override
         public Object current() {
-            return items[i];
+            return items.get(i);
         }
 
         @Override
@@ -63,7 +63,7 @@ public class Sequence {
 
     public static void main(String[] args) {
         int numberOfObjects = 10;
-        Sequence sequence = new Sequence(numberOfObjects);
+        Sequence sequence = new Sequence();
         for (int i = 0; i < numberOfObjects; i++) {
             sequence.add(Integer.toString(i));
         }
