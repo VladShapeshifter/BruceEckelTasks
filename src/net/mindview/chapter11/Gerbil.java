@@ -1,6 +1,7 @@
 package net.mindview.chapter11;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Gerbil {
     private static int counter;
@@ -13,12 +14,13 @@ public class Gerbil {
     }
 
     public static void main(String[] args) {
-        ArrayList arrayList = new ArrayList();
+        ArrayList<Gerbil> gerbils = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            arrayList.add(new Gerbil());
+            gerbils.add(new Gerbil());
         }
-        for (int i = 0; i < arrayList.size(); i++) {
-            ((Gerbil)arrayList.get(i)).hop();
+        Iterator<Gerbil> it = gerbils.iterator();
+        while (it.hasNext()) {
+            it.next().hop();
         }
     }
 }
