@@ -1,12 +1,15 @@
 package net.mindview.chapter11;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 public class Gerbil {
+    public String name;
     private static int counter;
     private final int gerbilNumber;
-    Gerbil() {
+    Gerbil(String name) {
+        this.name = name;
         gerbilNumber = counter++;
     }
     void hop() {
@@ -14,13 +17,27 @@ public class Gerbil {
     }
 
     public static void main(String[] args) {
-        ArrayList<Gerbil> gerbils = new ArrayList<>();
+        /*ArrayList<Gerbil> gerbils = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             gerbils.add(new Gerbil());
         }
         Iterator<Gerbil> it = gerbils.iterator();
         while (it.hasNext()) {
             it.next().hop();
+        }*/
+
+        Gerbil gerbil1 = new Gerbil("Stan");
+        Gerbil gerbil2 = new Gerbil("Matt");
+        Gerbil gerbil3 = new Gerbil("Bruce");
+        Map<String, Gerbil> gerbils = new HashMap<>();
+        gerbils.put(gerbil1.name, gerbil1);
+        gerbils.put(gerbil2.name, gerbil2);
+        gerbils.put(gerbil3.name, gerbil3);
+        Iterator<String> it = gerbils.keySet().iterator();
+        while (it.hasNext()) {
+            String name = it.next();
+            System.out.println(name);
+            gerbils.get(name).hop();
         }
     }
 }
