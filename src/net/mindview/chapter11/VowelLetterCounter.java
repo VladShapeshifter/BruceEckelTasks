@@ -7,6 +7,17 @@ public class VowelLetterCounter {
         int totalVowels = 0;
         Set<String> vowels = new HashSet<>();
         Collections.addAll(vowels, "A a E e I i O o U u".split(" "));
+        Map<String, Integer> letterFreq = new HashMap<>();
+        letterFreq.put("A", 0);
+        letterFreq.put("a", 0);
+        letterFreq.put("E", 0);
+        letterFreq.put("e", 0);
+        letterFreq.put("I", 0);
+        letterFreq.put("i", 0);
+        letterFreq.put("O", 0);
+        letterFreq.put("o", 0);
+        letterFreq.put("U", 0);
+        letterFreq.put("u", 0);
         /*Count vowels in words*/
         ArrayList<String> inputWords = new ArrayList<>(Arrays.asList(words.split(" ")));
         for (String word : inputWords) {
@@ -35,10 +46,13 @@ public class VowelLetterCounter {
         }
         for (String letter : letterList) {
             if (vowels.contains(letter)) {
+                Integer freq = letterFreq.get(letter);
+                letterFreq.put(letter, ++freq);
                 totalVowels++;
             }
         }
         System.out.println("Total vowels in the sentence is: " + totalVowels);
+        System.out.println(letterFreq);
     }
 
     public static void main(String[] args) {
