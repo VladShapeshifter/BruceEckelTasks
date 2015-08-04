@@ -1,13 +1,14 @@
 package net.mindview.chapter12;
 
 public class ExceptionChaining {
-    void f() throws ExceptionTypeTwo {
+    void f() {
         try {
             g();
         } catch (ExceptionTypeOne exceptionTypeOne) {
-            ExceptionTypeTwo ett = new ExceptionTypeTwo();
+            /*ExceptionTypeTwo ett = new ExceptionTypeTwo();
             ett.initCause(exceptionTypeOne);
-            throw ett;
+            throw ett;*/
+            throw new RuntimeException(exceptionTypeOne);
         }
     }
     void g() throws ExceptionTypeOne {
@@ -16,10 +17,11 @@ public class ExceptionChaining {
 
     public static void main(String[] args) {
         ExceptionChaining chaining = new ExceptionChaining();
-        try {
+        /*try {
             chaining.f();
         } catch (ExceptionTypeTwo exceptionTypeTwo) {
             exceptionTypeTwo.printStackTrace();
-        }
+        }*/
+        chaining.f();
     }
 }
