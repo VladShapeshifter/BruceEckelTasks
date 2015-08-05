@@ -9,8 +9,12 @@ public class Sequence {
     public Sequence() {
         items = new ArrayList();
     }
-    public void add(Object x) {
-        items.add(x);
+    public void add(Object x) throws TooManyItemsException {
+        if (items.size() >= 10) {
+            throw new TooManyItemsException("You just add too many items.");
+        } else {
+            items.add(x);
+        }
     }
 
     ListIterator getListIterator() {
@@ -70,7 +74,11 @@ public class Sequence {
         int numberOfObjects = 10;
         Sequence sequence = new Sequence();
         for (int i = 0; i < numberOfObjects; i++) {
-            sequence.add(Integer.toString(i));
+            try {
+                sequence.add(Integer.toString(i));
+            } catch (TooManyItemsException e) {
+                e.printStackTrace();
+            }
         }
 //        Selector selector = sequence.reverseSelector();
         ListIterator lit = sequence.getListIterator();
