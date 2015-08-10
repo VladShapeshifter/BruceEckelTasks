@@ -8,10 +8,10 @@ public class CADSystem extends Shape {
         super(i + 1);
         for (int j = 0; j < lines.length; j++) {
             lines[j] = new Line(j, j*j);
-            c = new Circle(1);
-            t = new Triangle(1);
-            System.out.println("Combined constructor");
         }
+        c = new Circle(1);
+        t = new Triangle(1);
+        System.out.println("Combined constructor");
     }
     @Override
     void dispose() {
@@ -27,7 +27,7 @@ public class CADSystem extends Shape {
     public static void main(String[] args) {
         CADSystem x = new CADSystem(47);
         try {
-
+            return;
         } finally {
             x.dispose();
         }
