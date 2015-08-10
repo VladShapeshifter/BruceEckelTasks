@@ -1,6 +1,6 @@
 package net.mindview.chapter12;
 
-public class Shape {
+class Shape {
     Shape(int i) {
         System.out.println("Shape constructor");
     }

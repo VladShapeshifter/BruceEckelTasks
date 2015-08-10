@@ -1,6 +1,6 @@
 package net.mindview.chapter12;
 
-public class Line extends Shape {
+class Line extends Shape {
     private int start, end;
     Line(int start, int end) {
         super(start);

@@ -1,6 +1,6 @@
 package net.mindview.chapter12;
 
-public class Circle extends Shape {
+class Circle extends Shape {
     Circle(int i) {
         super(i);
         System.out.println("Draw a Circle");
