@@ -13,11 +13,13 @@ public class LostMessage {
             LostMessage lm = new LostMessage();
             try {
                 try {
-                    lm.f();
+
                 } finally {
-                    lm.dispose();
+
                 }
             } finally {
+                lm.f();
+                lm.dispose();
                 throw new RuntimeException("Another exception");
             }
         } catch (Exception e) {
