@@ -24,6 +24,25 @@ public class StormyInning extends Inning implements Storm {
         try {
             StormyInning si = new StormyInning();
             si.atBat();
+        } catch (PopFoul e) {
+            System.out.println("Pop Foul");
+        } catch (RainedOut e) {
+            System.out.println("Rained out");
+        } catch (BaseballException e) {
+            System.out.println("Generic baseball exception");
+        }
+
+        try {
+            Inning i = new StormyInning();
+            i.atBat();
+        } catch (Strike e) {
+            System.out.println("Strike");
+        } catch (Foul e) {
+            System.out.println("Foul");
+        } catch (RainedOut e) {
+            System.out.println("Rained out");
+        } catch (BaseballException e) {
+            System.out.println("Generic exception");
         }
     }
 }
