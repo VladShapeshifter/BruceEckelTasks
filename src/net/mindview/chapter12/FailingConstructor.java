@@ -8,6 +8,9 @@ public class FailingConstructor {
         fcd.dispose();
         fcd2 = new FailingConstructorDispose();
     }
+    void dispose() {
+        System.out.println("FailingConstructor was disposed");
+    }
 
     public static void main(String[] args) {
         try {
@@ -16,6 +19,7 @@ public class FailingConstructor {
 
             } finally {
                 fc.fcd2.dispose();
+                fc.dispose();
             }
         } catch (MyException e) {
             e.showMessege();
