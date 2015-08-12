@@ -19,11 +19,17 @@ public class StormyInning extends Inning implements Storm {
     public void atBat() throws PopFoul {
 
     }
+    public void score() throws UmpireException {
+
+    }
 
     public static void main(String[] args) {
         try {
             StormyInning si = new StormyInning();
             si.atBat();
+            si.score();
+        } catch (UmpireException e) {
+            e.printStackTrace();
         } catch (PopFoul e) {
             System.out.println("Pop Foul");
         } catch (RainedOut e) {
