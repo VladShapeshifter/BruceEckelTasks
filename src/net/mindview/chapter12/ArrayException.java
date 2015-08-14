@@ -17,8 +17,9 @@ public class ArrayException {
             try {
                 System.out.println(nums[i]);
             } catch (ArrayIndexOutOfBoundsException ae) {
-                System.out.println("No such element in the array");
-                logException(ae);
+                throw new RuntimeException(ae);
+                /*System.out.println("No such element in the array");
+                logException(ae);*/
             }
 
         }
