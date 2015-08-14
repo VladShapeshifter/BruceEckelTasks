@@ -1,4 +1,4 @@
 package net.mindview.chapter12;
 
-class StormException extends Exception {
+class StormException extends RuntimeException {
 }

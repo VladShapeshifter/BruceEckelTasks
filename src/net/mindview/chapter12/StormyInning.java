@@ -24,7 +24,7 @@ public class StormyInning extends Inning implements Storm {
     }
 
     public static void main(String[] args) {
-        try {
+        /*try {
             StormyInning si = new StormyInning();
             si.atBat();
             si.score();
@@ -49,6 +49,13 @@ public class StormyInning extends Inning implements Storm {
             System.out.println("Rained out");
         } catch (BaseballException e) {
             System.out.println("Generic exception");
-        }
+        }*/
+
+        StormyInning si = new StormyInning();
+        si.atBat();
+        si.score();
+
+        Inning i = new StormyInning();
+        i.atBat();
     }
 }

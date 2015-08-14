@@ -1,4 +1,4 @@
 package net.mindview.chapter12;
 
-class BaseballException extends Exception {
+class BaseballException extends RuntimeException {
 }
