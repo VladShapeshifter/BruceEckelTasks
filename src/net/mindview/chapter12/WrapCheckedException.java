@@ -6,6 +6,7 @@ public class WrapCheckedException {
             switch (type) {
                 case 0: throw new Annoyance();
                 case 1: throw new Sneeze();
+                case 2: throw new RuntimeException("Where I am?");
                 default: return;
             }
         } catch (Exception e) {
