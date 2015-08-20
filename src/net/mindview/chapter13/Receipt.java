@@ -3,11 +3,14 @@ package net.mindview.chapter13;
 import java.util.Formatter;
 
 public class Receipt {
+    private int width10 = 10;
+    private int width5 = 5;
+    private int width15 = 15;
     private double total = 0;
     private Formatter f = new Formatter(System.out);
     public void printTitle() {
-        f.format("%-15s %5s %10s\n", "Item", "Qty", "Price");
-        f.format("%-15s %5s %10s \n", "----", "---", "-----");
+        f.format("%-15s %" + width5 + "s %" + width10 + "s\n", "Item", "Qty", "Price");
+        f.format("%-15s %" + width5 + "s %" + width10 + "s \n", "----", "---", "-----");
     }
     public void print(String name, int qty, double price) {
         f.format("%-15.15s %5d %10.2f\n", name, qty, price);
