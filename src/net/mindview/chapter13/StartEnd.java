@@ -40,9 +40,9 @@ public class StartEnd {
     }
 
     public static void main(String[] args) {
-        for (String in : input.split("\n")) {
+        for (String in : Groups.POEM.split("\n")) {
             System.out.println("input : " + in);
-            for (String regex : new String[] {"\\w*eve\\w*", "\\w*ever", "T\\w+", "Never.*?!"}) {
+            for (String regex : new String[] {"\\w*ill\\w*g", ".?the.?", "T\\w+", "The.*rum.*B*tch\\."}) {
                 examine(in, regex);
             }
         }
