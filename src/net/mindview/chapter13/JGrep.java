@@ -11,11 +11,10 @@ public class JGrep {
             System.out.println("Usage: java JGrep file regex");
             System.exit(0);
         }
-        Pattern compile = Pattern.compile("\"");
+        /*Pattern compile = Pattern.compile("\"");
         Matcher matcher = compile.matcher(args[2]);
         String s = matcher.replaceAll("");
-        System.out.println(s);
-
+        System.out.println(s);*/
         Pattern p = Pattern.compile(args[1]);
         int index = 0;
         Matcher m = p.matcher("");
