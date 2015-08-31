@@ -14,8 +14,8 @@ public class ClassAnalysis {
         Pattern pp = Pattern.compile("(?m).+\\.java$");
         Matcher mm = pp.matcher(path);
 
-        Pattern p = java.util.regex.Pattern.compile("//\\s?\\w+.*");
-        Pattern p1 = java.util.regex.Pattern.compile("\\w+");
+        Pattern p = Pattern.compile("//\\s?\\w+.*");
+        Pattern p1 = Pattern.compile("\\w+");
         Matcher m = p1.matcher("");
         if (mm.find()) {
             System.out.println("All literals from current class:");
