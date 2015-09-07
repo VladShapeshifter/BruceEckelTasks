@@ -1,4 +1,4 @@
-package net.mindview.chapter13.toys;
+package net.mindview.chapter14.toys;
 
 public interface MyNewInterface {
 }

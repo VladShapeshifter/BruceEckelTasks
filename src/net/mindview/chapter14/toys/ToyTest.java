@@ -1,4 +1,4 @@
-package net.mindview.chapter13.toys;
+package net.mindview.chapter14.toys;
 
 public class ToyTest {
     static void printInfo(Class cc) {
@@ -10,7 +10,7 @@ public class ToyTest {
     public static void main(String[] args) {
         Class c = null;
         try {
-            c = Class.forName("net.mindview.chapter13.toys.FancyToy");
+            c = Class.forName("net.mindview.chapter14.toys.FancyToy");
         } catch (ClassNotFoundException e) {
             System.out.println("Can't find FancyToy");
             System.exit(1);
