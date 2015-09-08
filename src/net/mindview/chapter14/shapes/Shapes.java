@@ -8,11 +8,14 @@ public class Shapes {
         List<Shape> shapeList = Arrays.asList(new Circle(), new Square(), new Triangle(), new Rhomboid());
         Shapes shapes = new Shapes();
         for (Shape shape : shapeList) {
-            shape.draw();
-            shapes.rotate(shape);
+//            shape.draw();
+//            shapes.rotate(shape);
+            if (shape.hasAngles == true) {
+                System.out.println(shape);
+            }
         }
 
-        Rhomboid rhomboid = new Rhomboid();
+        /*Rhomboid rhomboid = new Rhomboid();
         Shape rhomboidAsShape = (Shape) rhomboid;
         Rhomboid rhomboid2 = (Rhomboid) rhomboidAsShape;
         Shape rhomboidAsShape1 = (Shape) rhomboidAsShape;
@@ -20,8 +23,7 @@ public class Shapes {
         System.out.println(rhomboidAsShape);
         System.out.println(rhomboid2);
         System.out.println(rhomboid2 instanceof Shape);
-        System.out.println(rhomboidAsShape1);
-
+        System.out.println(rhomboidAsShape1);*/
 
 
     }
