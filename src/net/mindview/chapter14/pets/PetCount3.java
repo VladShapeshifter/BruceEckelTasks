@@ -1,14 +1,12 @@
 package net.mindview.chapter14.pets;
 
-import net.mindview.util.MapData;
-
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class PetCount3 {
     static class PetCounter extends LinkedHashMap<Class<? extends Pet>, Integer> {
         public PetCounter() {
-            super(MapData.map(LiteralPetCreator.allTypes, 0));
+//            super(MapData.map(LiteralPetCreator.allTypes, 0));
         }
         public void count(Pet pet) {
             for (Map.Entry<Class<? extends Pet>, Integer> pair : entrySet()) {

@@ -8,4 +8,12 @@ public class Rodent extends Pet {
     public Rodent(String s) {
         super(s);
     }
+
+    public static class Factory implements net.mindview.chapter14.pets.Factory<Rodent> {
+
+        @Override
+        public Rodent create() {
+            return new Rodent();
+        }
+    }
 }

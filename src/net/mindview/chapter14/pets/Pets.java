@@ -3,7 +3,7 @@ package net.mindview.chapter14.pets;
 import java.util.ArrayList;
 
 public class Pets {
-    public static final PetCreator creator = new LiteralPetCreator();
+    public static final PetCreator creator = new FabricPetCreator();
     public static Pet randomPet() {
         return creator.randomPet();
     }

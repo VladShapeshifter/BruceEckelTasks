@@ -41,4 +41,12 @@ public class Gerbil extends Rodent {
             gerbils.get(name).hop();
         }
     }*/
+
+    public static class Factory implements net.mindview.chapter14.pets.Factory<Gerbil> {
+
+        @Override
+        public Gerbil create() {
+            return new Gerbil();
+        }
+    }
 }

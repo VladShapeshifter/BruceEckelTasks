@@ -1,3 +1,4 @@
+/*
 package net.mindview.chapter14.pets;
 
 import java.util.Arrays;
@@ -19,3 +20,4 @@ public class LiteralPetCreator extends PetCreator {
         System.out.println(types);
     }
 }
+*/

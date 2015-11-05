@@ -4,16 +4,17 @@ import java.util.*;
 
 public abstract class PetCreator {
     private Random rand = new Random(47);
-    public abstract List<Class<? extends Pet>> types();
+    public abstract List<Factory<? extends Pet>> types();
     public Pet randomPet() {
         int n = rand.nextInt(types().size());
-        try {
+        return types().get(n).create();
+        /*try {
             return types().get(n).newInstance();
         } catch (InstantiationException e) {
             throw new RuntimeException(e);
         } catch (IllegalAccessException e) {
             throw new RuntimeException(e);
-        }
+        }*/
     }
     public Pet[] createArray(int size) {
         Pet[] result = new Pet[size];

@@ -1,18 +1,12 @@
 package net.mindview.chapter14.pets;
 
-public class Pet extends Individual {
-    public Pet() {
-        super();
-    }
-    public Pet(String s) {
-        super(s);
-    }
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
-    @Override
-    public String toString() {
-        return getClass().getSimpleName();
-    }
-    /*static List<Factory<? extends Pet>> petFactories = new ArrayList<>();
+public class FabricPetCreator extends PetCreator {
+
+    static List<Factory<? extends Pet>> petFactories = new ArrayList<>();
     static {
         petFactories.add(new Cat.Factory());
         petFactories.add(new Cymric.Factory());
@@ -28,7 +22,14 @@ public class Pet extends Individual {
         petFactories.add(new Gerbil.Factory());
     }
     private static Random rand = new Random(47);
-    public static Pet createRandom() {
+
+    @Override
+    public List<Factory<? extends Pet>> types() {
+        return petFactories;
+    }
+
+    /*@Override
+    public Pet randomPet() {
         int n = rand.nextInt(petFactories.size());
         return petFactories.get(n).create();
     }*/
