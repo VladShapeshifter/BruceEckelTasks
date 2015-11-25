@@ -5,7 +5,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.util.regex.Pattern;
 
-public class ShowMethods {
+class ShowMethods {
     private static String usage = "usage:\n" +
             "To show all methods in class or:\n" +
             "ShowMethods qualified.class.name word\n" +
