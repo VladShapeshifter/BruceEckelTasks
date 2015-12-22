@@ -4,6 +4,7 @@ import java.lang.reflect.Proxy;
 
 public class TransactionsDemo {
     public static void consumer(Payment p) {
+//        p.makePayment("3 UAH");
         p.makePayment();
     }
 
