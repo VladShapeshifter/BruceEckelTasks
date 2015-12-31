@@ -5,5 +5,11 @@ public class RegisteredFactories {
         for (int i = 0; i < 10; i++) {
             System.out.println(Part.createRandom());
         }
+        System.out.println("-------------------------------------");
+        GasFilter gasFilter = null;
+        Part.addNewPart(gasFilter);
+        for (int i = 0; i < 11; i++) {
+            System.out.println(Part.createRandom());
+        }
     }
 }
