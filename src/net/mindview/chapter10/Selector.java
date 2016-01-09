@@ -1,7 +1,7 @@
 package net.mindview.chapter10;
 
-interface Selector {
+interface Selector<T> {
     boolean end();
-    Object current();
+    T current();
     void next();
 }
