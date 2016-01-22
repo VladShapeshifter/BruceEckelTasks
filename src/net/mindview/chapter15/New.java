@@ -20,7 +20,7 @@ public class New {
     }
 
     public static void main(String[] args) {
-        Map<String, Holder3> map = New.map();
+        Map<String, Holder3> map = New.<String,Holder3>map();
         map.put("holder three", new Holder3(""));
         System.out.println(map);
     }
